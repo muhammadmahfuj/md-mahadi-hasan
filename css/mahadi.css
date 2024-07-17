@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 /* root */
 :root{
    --color-primary: #000000;
    --color-secondary: #D9D9D9;
-   --background-gradient-btn: linear-gradient(to right, #B796FF 0%, #5B2CC0 100%);
-   --background-gradient-container: linear-gradient(to right, #F6A224 0%, #5E34D7 38%, #EC9F2B 81%, #81A4FF 100%);
+   --color-accent: #151515;
+   --bg-grad-btn: linear-gradient(to right, #B796FF 0%, #5B2CC0 100%);
+   --bg-grad-container: linear-gradient(to right, #69ED8E 0%, #3489D7 93%);
+   --bg-grad-img-container: linear-gradient(to right, #F6A224 0%, #5E34D7 38%, #EC9F2B 81%, #81A4FF 100%);
    --max-width: 114rem;
 }
 
@@ -28,22 +30,28 @@ body{
 a{
    text-decoration: none;
 }
-a:link, a:visited, a:hover, a:active { color: var(--color-secondary); }
+a:link, a:visited, a:active { color: var(--color-secondary); }
 li{
    list-style: none;
 }
 
 /* common styles */
-   .container-gradient{
-      border-width: 0.01rem;
-      border-style: solid;
-      border-image: var(--background-gradient-container) 10;
-   }
+  
    
 /* body */
    /* header */
       /* navbar */
-      
+      .navbar{
+         margin-top: 2.5rem;
+      }
+      .nav-items{
+         width: 56rem;
+         height: 6.1rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1.7rem;
+      }
       /* hero */
    /* main */
    /* footer */
