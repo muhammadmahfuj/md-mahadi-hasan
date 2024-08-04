@@ -5,52 +5,169 @@
    --color-primary: #000000;
    --color-secondary: #D9D9D9;
    --color-accent: #151515;
-   --bg-grad-btn: linear-gradient(to right, #B796FF 0%, #5B2CC0 100%);
-   --bg-grad-container: linear-gradient(to right, #69ED8E 0%, #3489D7 93%);
-   --bg-grad-img-container: linear-gradient(to right, #F6A224 0%, #5E34D7 38%, #EC9F2B 81%, #81A4FF 100%);
-   --max-width: 114rem;
+   --gradient-type-1: linear-gradient(to right, #69ED8E 0%, #3489D7 93%);
+   --gradient-type-2: linear-gradient(to right, #F6A224 0%, #68D734 41%, #3BEC2B 66%, #81A4FF 100%);
+   --gradient-type-3: linear-gradient(to right, #F6A224 0%, #5E34D7 38%, #EC9F2B 81%, #81A4FF 100%);
+   --gradient-type-4: linear-gradient(45deg, #000000 2%, #FFFFFF 23%, #000000 59%, #FFFFFF 100%);
+   --gradient-type-5: linear-gradient(to right, #B796FF 0%, #5B2CC0 100%);
+   --gradient-type-6: linear-gradient(45deg, #000000 0%, #906DF3 33%, #000000 73%, #FFFFFF 100%);
+   --gradient-type-7: linear-gradient(45deg, #9BFCDF 0%, #906DF3 33%, #6FC351 73%, #FFFFFF 100%);
+   --max-width: 124rem;
 }
 
 /* global settings */
 *{
    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
+html, body{
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+
+/* Typography */
 html {
-   background-color: var(--color-primary);
    font-size: 62.5%;
 }
+
 body{
-   color: var(--color-body-text);
-   font-family: "Inter", sans-serif;
+   background-color: var(--color-primary);
+   color: var(--color-secondary);
+   font-family: "Inter", Arial, Helvetica, sans-serif;
+   font-size: 1.4rem;
+   font-weight: 400;
+}
+
+/* inter font variables 
+   Thin: 100
+   Light: 300
+   Regular: 400
+   Medium: 500
+   SemiBold: 600
+   Bold: 700
+   Extrabold: 800
+   Black: 900
+*/
+
+h1, h2, h3, h4{
+   font-weight: 900;
+   color: var(--color-secondary);
+   margin: 0;
+}
+p{
+   margin: 0;
+}
+h1 {
+   font-size: 9.6rem;
+}
+h2{
+   font-size: 3.6rem;
+}
+h3{
+   font-size: 2.6rem;
+}
+h4{
+   font-weight: 500;
    font-size: 1.6rem;
-   line-height: 1.5;
-   margin: auto;
-   max-width: var(--max-width);
 }
 a{
    text-decoration: none;
 }
-a:link, a:visited, a:active { color: var(--color-secondary); }
+a:link, a:visited, a:active { 
+   color: var(--color-secondary); 
+}
 li{
    list-style: none;
 }
 
+* img{
+   cursor: pointer;
+}
+
 /* common styles */
-  
+.container {
+   max-width: var(--max-width);
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+   /* border: 1px solid red; */
+ }
+
+/* common styles */
+  .display-flex{
+   display: flex;
+  }
+  .container-gradient{
+      position: relative;
+      border-radius: 2.6rem;
+
+   }
+   .container-gradient::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 100%;
+      height: 100%;
+      border-radius: 2.6rem;
+      background: var(--gradient-type-1);
+      z-index: -1;
+      padding: 2px;
+   }
    
 /* body */
    /* header */
       /* navbar */
+      .logo{
+         height: 11.5rem;
+         width: 10rem;
+      }
+      .circle-icon{
+         height: 3.7rem;
+         width: 3.7rem;
+      }
       .navbar{
          margin-top: 2.5rem;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
       }
       .nav-items{
-         width: 56rem;
-         height: 6.1rem;
-         display: flex;
          justify-content: center;
          align-items: center;
+         padding: 0.8rem 4rem;
          gap: 1.7rem;
+         background-color: var(--color-primary);
+      }
+      .test-wrapper{
+         width: 42.4rem;
+         height: 70rem;
+         background-color: var(--color-accent);
+         position: relative;
+         justify-content: center;
+         align-items: center;
+      }
+      .test{
+         height: 20rem;
+         width: 20rem;
+         border-radius: 2.6rem;
+         overflow: hidden;
+      }
+      .test img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         /* display: none; */
+      }
+      .hero .container-gradient::after{
+         background: var(--gradient-type-3);
+         
       }
       /* hero */
    /* main */
