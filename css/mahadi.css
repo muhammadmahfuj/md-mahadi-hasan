@@ -137,6 +137,7 @@ li{
          flex-direction: row;
          justify-content: space-between;
          align-items: center;
+         margin-bottom: 9rem;
       }
       .nav-items{
          justify-content: center;
@@ -145,30 +146,28 @@ li{
          gap: 1.7rem;
          background-color: var(--color-primary);
       }
-      .test-wrapper{
-         width: 42.4rem;
-         height: 70rem;
-         background-color: var(--color-accent);
-         position: relative;
-         justify-content: center;
-         align-items: center;
+      
+     
+      /* hero */
+      .hero{
+         margin-bottom: 10rem;
       }
-      .test{
-         height: 20rem;
-         width: 20rem;
-         border-radius: 2.6rem;
+      .video-wraper{
+         border-radius: 1.6rem;
+         /* border: 1px solid rgba(201, 209, 247, 0.2); */
+         /* border: 1px solid red; */
+         width: 100%;
+         height: 61.4rem;
+         padding: 3.2rem;
          overflow: hidden;
       }
-      .test img{
-         height: 100%;
+      .video-wraper video {
+         border: 1px solid rgba(201, 209, 247, 0.2);
+         border-radius: 1.6rem;
          width: 100%;
+         height: 100%;
+         transform: scale(1.5);
          object-fit: cover;
-         /* display: none; */
       }
-      .hero .container-gradient::after{
-         background: var(--gradient-type-3);
-         
-      }
-      /* hero */
    /* main */
    /* footer */
