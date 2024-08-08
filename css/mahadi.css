@@ -4,6 +4,7 @@
 :root{
    --color-primary: #000000;
    --color-secondary: #D9D9D9;
+   --color-white: #FFFFFF;
    --color-accent: #151515;
    --color-hover: #D9D9D9;
    --gradient-type-1: linear-gradient(to right, #69ED8E 0%, #3489D7 93%);
@@ -56,7 +57,7 @@ body{
    font-family;
    */
 h1, h2, h3, h4{
-   color: var(--color-secondary);
+   color: var(--color-white);
    margin: 0;
 }
 p{
@@ -283,4 +284,29 @@ li{
          padding: 1px 0.2px;
          background: var(--gradient-type-4);
       }
+
+      /* who you're working with */
+      .working-with-header{
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         width: 100%;
+      }
+      .working-with-header h2{
+         font-weight: 900;
+         font-style: italic;
+         font-size: 9rem;
+      }
+      .working__icon{
+         height: 8.6rem;
+         width: 8.6rem;
+         overflow: hidden;
+      }
+      .working__icon img{
+         height: 100%;
+         width: 100%;
+         object-fit: contain;
+      }
+      
    /* footer */
