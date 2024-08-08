@@ -5,6 +5,7 @@
    --color-primary: #000000;
    --color-secondary: #D9D9D9;
    --color-accent: #151515;
+   --color-hover: #9E00FF;
    --gradient-type-1: linear-gradient(to right, #69ED8E 0%, #3489D7 93%);
    --gradient-type-2: linear-gradient(to right, #F6A224 0%, #68D734 41%, #3BEC2B 66%, #81A4FF 100%);
    --gradient-type-3: linear-gradient(to right, #F6A224 0%, #5E34D7 38%, #EC9F2B 81%, #81A4FF 100%);
@@ -24,8 +25,6 @@
 html, body{
    width: 100%;
    height: 100%;
-   margin: 0;
-   padding: 0;
    overflow-x: hidden;
 }
 
@@ -33,26 +32,29 @@ html, body{
 html {
    font-size: 62.5%;
 }
-
 body{
    background-color: var(--color-primary);
    color: var(--color-secondary);
-   font-family: "Inter", Arial, Helvetica, sans-serif;
-   font-size: 1.4rem;
-   font-weight: 400;
+   font: 400 1.4rem "Inter", Arial, Helvetica, sans-serif;
 }
-
-/* inter font variables 
-   Thin: 100
-   Light: 300
-   Regular: 400
-   Medium: 500
-   SemiBold: 600
-   Bold: 700
-   Extrabold: 800
-   Black: 900
-*/
-
+   /* inter font variables 
+      Thin: 100
+      Light: 300
+      Regular: 400
+      Medium: 500
+      SemiBold: 600
+      Bold: 700
+      Extrabold: 800
+      Black: 900
+   */
+   /* 
+   font: shorthand order
+   font-style
+   font-variant
+   font-weight
+   font-size/line-height
+   font-family;
+   */
 h1, h2, h3, h4{
    font-weight: 900;
    color: var(--color-secondary);
@@ -71,8 +73,7 @@ h3{
    font-size: 2.6rem;
 }
 h4{
-   font-weight: 500;
-   font-size: 1.6rem;
+   font: 500 1.6rem;
 }
 a{
    text-decoration: none;
@@ -89,38 +90,63 @@ li{
 }
 
 /* common styles */
-.container {
-   max-width: var(--max-width);
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 0.5rem;
-   padding-right: 0.5rem;
-   /* border: 1px solid red; */
- }
-
-/* common styles */
+   .container-body {
+      max-width: var(--max-width);
+      margin: inherit auto;
+      padding: 0 0.5rem;
+      /* border: 1px solid red; */
+   }
   .display-flex{
    display: flex;
   }
-  .container-gradient{
+  .container-content{
+   border-radius: 2.6rem;
+   padding: 3.5rem 2.5rem;
+  }
+  .container__gradient{
       position: relative;
       border-radius: 2.6rem;
-
    }
-   .container-gradient::after {
+   .container__gradient::after {
+      background: var(--gradient-type-1);
+      border-radius: 2.6rem;
       content: "";
+      height: 100%;
+      left: 50%;
+      padding: 2px;
       position: absolute;
       top: 50%;
-      left: 50%;
       translate: -50% -50%;
       width: 100%;
-      height: 100%;
-      border-radius: 2.6rem;
-      background: var(--gradient-type-1);
       z-index: -1;
-      padding: 2px;
    }
-   
+   .margin__bottom{
+      margin-bottom: 8rem;
+   }
+   .btn{
+      border-radius: 3rem;
+      border: none;
+      color: var(--color-titles);
+      cursor: pointer;
+      font: 500 1.6rem;
+      max-width: 24rem;
+      padding: 2rem 5.5rem;
+      transition: all 0.15s;
+   }
+   .btn:hover{
+      box-shadow:  0 0 10px var(--color-hover),
+      0 0 20px var(--color-hover),
+      0 0 30px var(--color-hover);;
+   }
+   .btn-type-1{
+      background-color: var(--color-secondary);
+   }
+   .btn-type-2{
+      background-color: var(--color-primary);
+   }
+   .btn-type-3{
+      background-color: var(--gradient-type-5);
+   }
 /* body */
    /* header */
       /* navbar */
