@@ -5,11 +5,11 @@
    --color-primary: #000000;
    --color-secondary: #D9D9D9;
    --color-accent: #151515;
-   --color-hover: #9E00FF;
+   --color-hover: #D9D9D9;
    --gradient-type-1: linear-gradient(to right, #69ED8E 0%, #3489D7 93%);
    --gradient-type-2: linear-gradient(to right, #F6A224 0%, #68D734 41%, #3BEC2B 66%, #81A4FF 100%);
    --gradient-type-3: linear-gradient(to right, #F6A224 0%, #5E34D7 38%, #EC9F2B 81%, #81A4FF 100%);
-   --gradient-type-4: linear-gradient(45deg, #000000 2%, #FFFFFF 23%, #000000 59%, #FFFFFF 100%);
+   --gradient-type-4: linear-gradient(164deg, #000000 2%, #FFFFFF 23%, #000000 59%, #FFFFFF 100%);
    --gradient-type-5: linear-gradient(to right, #B796FF 0%, #5B2CC0 100%);
    --gradient-type-6: linear-gradient(45deg, #000000 0%, #906DF3 33%, #000000 73%, #FFFFFF 100%);
    --gradient-type-7: linear-gradient(45deg, #9BFCDF 0%, #906DF3 33%, #6FC351 73%, #FFFFFF 100%);
@@ -56,7 +56,6 @@ body{
    font-family;
    */
 h1, h2, h3, h4{
-   font-weight: 900;
    color: var(--color-secondary);
    margin: 0;
 }
@@ -101,6 +100,13 @@ li{
   }
   .content-container{
    border-radius: 2.6rem;
+   text-align: center;
+  }
+  .content-container__type1{
+   height: 4.5rem;
+   padding: 1rem 2.5rem;
+  }
+  .content-container__type2{
    padding: 3.5rem 2.5rem;
   }
   .container__gradient{
@@ -113,7 +119,7 @@ li{
       content: "";
       height: 100%;
       left: 50%;
-      padding: 2px;
+      padding: 1.7px;
       position: absolute;
       top: 50%;
       translate: -50% -50%;
@@ -128,22 +134,32 @@ li{
       border: none;
       color: var(--color-titles);
       cursor: pointer;
-      font: 500 1.6rem;
+      width: 24rem;
+      font-weight: 600;
+      font-size: 1.6rem;
       max-width: 24rem;
       padding: 2rem 5.5rem;
       transition: all 0.15s;
    }
-   .btn:hover{
+   
+   /* .btn:hover{
       box-shadow:  0 0 10px var(--color-hover),
       0 0 20px var(--color-hover),
-      0 0 30px var(--color-hover);;
-   }
+      0 0 30px var(--color-hover);
+   } */
    .btn-type-1{
       background-color: var(--color-secondary);
+      box-shadow:  0 4px 30px 11px rgb(255, 255, 255, 15%);
+   }
+   .btn-type-1 a{
+      color: var(--color-primary);
+      
    }
    .btn-type-2{
       background-color: var(--color-primary);
+      
    }
+
    .btn-type-3{
       background-color: var(--gradient-type-5);
    }
@@ -191,4 +207,80 @@ li{
          object-fit: cover;
       }
    /* main */
+      /* Trusted by */
+      .trusted-by{
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         gap: 1rem;
+      }
+      .trusted__body{
+         height: 4rem;
+         width: 13rem;
+         background-color: var(--color-accent);
+      }
+      .trusted-by .container__gradient::after{
+         background: var(--gradient-type-2);
+      }
+      .trusted__img{
+         width: 69rem;
+         overflow: hidden;
+      }
+      .trusted__img img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+
+      .hear-feel__body{
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         text-align: center;
+         gap: 3rem;
+         padding: 5.5rem 0;
+      }
+      .hear-feel__body{
+         width: 100%;
+         height: 43.5rem;
+         background-color: var(--color-accent);
+      }
+      .hear-feel .container__gradient::after{
+         background: var(--gradient-type-3);
+         
+      }
+      
+      .see-believe{
+         position: relative;
+         z-index: 1;
+      }
+      .see-believe__body{
+         justify-content: center;
+         align-items: center;
+         font-size: 1.2rem;
+         width: 28.5rem;
+         background-color: var(--color-accent);
+      }
+      .see-believe .container__gradient::after{
+         background: var(--gradient-type-3);
+      }
+      .hear-feel__body h2{
+         margin-bottom: 2rem;
+         font-weight: 600;
+         font-size: 4.8rem;
+         width: 103rem;
+      }
+      .hear-feel-btn{
+         flex-direction: row;
+         gap: 4.5rem;
+      }
+      .hear-feel-btn{
+         position: relative;
+         z-index: 1;
+      }
+      .hear-feel-btn .container__gradient::after{
+         border-radius: 3rem;
+         padding: 1px 0.2px;
+         background: var(--gradient-type-4);
+      }
    /* footer */
