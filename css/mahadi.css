@@ -310,11 +310,11 @@ li{
          height: 8.6rem;
          width: 8.6rem;
          filter:
-            drop-shadow(0 0 325px rgb(255, 255, 255, 0.5))
-            drop-shadow(0 0 185px rgb(255, 255, 255, 0.5))
-            drop-shadow(0 0 108px rgb(255, 255, 255, 0.5))
-            drop-shadow(0 0 54px rgb(255, 255, 255, 0.5))
-            drop-shadow(0 0 15px rgb(255, 255, 255, 0.5))
+            drop-shadow(0 0 325px rgb(255, 255, 255, 0.2))
+            drop-shadow(0 0 185px rgb(255, 255, 255, 0.2))
+            drop-shadow(0 0 108px rgb(255, 255, 255, 0.2))
+            drop-shadow(0 0 54px rgb(255, 255, 255, 0.3))
+            drop-shadow(0 0 15px rgb(255, 255, 255, 0.4))
             drop-shadow(0 0 7px rgb(255, 255, 255, 0.5));
          overflow: hidden;
       }
@@ -324,11 +324,11 @@ li{
          object-fit: contain;
          filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.5));
       }
-      .working__left{
+      /* .working__left{
          position: relative;
          z-index: 1;
 
-      }
+      } */
       .working__left__body{
          flex-direction: column;
          justify-content: center;
@@ -337,6 +337,9 @@ li{
          font-size: 1.2rem;
          width: 42.5rem;
          background-color: var(--color-accent);
+      }
+      .working__left .container__gradient::after{
+         background: var(--gradient-type-3);
       }
       .working__body__img{
          height: 38rem;
@@ -358,7 +361,5 @@ li{
       .working__left__body p{
          margin-bottom: 1.5rem;
       }
-      .see-believe .container__gradient::after{
-         background: var(--gradient-type-3);
-      }
+      
    /* footer */
