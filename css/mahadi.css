@@ -108,7 +108,7 @@ li{
    padding: 1rem 2.5rem;
   }
   .content-container__type2{
-   padding: 3.5rem 2.5rem;
+   padding: 3.4rem 2.5rem;
   }
   .container__gradient{
       position: relative;
@@ -291,22 +291,74 @@ li{
          align-items: center;
          justify-content: center;
          text-align: center;
+         
          width: 100%;
       }
-      .working-with-header h2{
+      .working-with-header h1{
          font-weight: 900;
          font-style: italic;
          font-size: 9rem;
+         filter:
+            drop-shadow(0 0 700px rgb(255, 255, 255, 0.1))
+            drop-shadow(0 0 902px rgb(255, 255, 255, 0.3))
+            drop-shadow(0 0 203px rgb(255, 255, 255, 0.2))
+            drop-shadow(0 0 263px #9E00FF)
+            drop-shadow(0 0 75px rgb(255, 255, 255, 0.3))
+            drop-shadow(0 0 38px rgb(255, 255, 255, 0.2));
       }
       .working__icon{
          height: 8.6rem;
          width: 8.6rem;
+         filter:
+            drop-shadow(0 0 325px rgb(255, 255, 255, 0.5))
+            drop-shadow(0 0 185px rgb(255, 255, 255, 0.5))
+            drop-shadow(0 0 108px rgb(255, 255, 255, 0.5))
+            drop-shadow(0 0 54px rgb(255, 255, 255, 0.5))
+            drop-shadow(0 0 15px rgb(255, 255, 255, 0.5))
+            drop-shadow(0 0 7px rgb(255, 255, 255, 0.5));
          overflow: hidden;
       }
       .working__icon img{
          height: 100%;
          width: 100%;
          object-fit: contain;
+         filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.5));
       }
-      
+      .working__left{
+         position: relative;
+         z-index: 1;
+
+      }
+      .working__left__body{
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 1rem;
+         font-size: 1.2rem;
+         width: 42.5rem;
+         background-color: var(--color-accent);
+      }
+      .working__body__img{
+         height: 38rem;
+         width: 37rem;
+         overflow: hidden;
+      }
+      .working__left__body img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+      .working__left__body h3{
+         font-weight: 500;
+         font-size: 4rem;
+         background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+      .working__left__body p{
+         margin-bottom: 1.5rem;
+      }
+      .see-believe .container__gradient::after{
+         background: var(--gradient-type-3);
+      }
    /* footer */
