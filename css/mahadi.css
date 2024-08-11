@@ -300,11 +300,11 @@ li{
          font-size: 9rem;
          filter:
             drop-shadow(0 0 700px rgb(255, 255, 255, 0.1))
-            drop-shadow(0 0 902px rgb(255, 255, 255, 0.3))
-            drop-shadow(0 0 203px rgb(255, 255, 255, 0.2))
+            drop-shadow(0 0 902px rgb(255, 255, 255, 0.2))
+            drop-shadow(0 0 203px rgb(255, 255, 255, 0.1))
             drop-shadow(0 0 263px #9E00FF)
-            drop-shadow(0 0 75px rgb(255, 255, 255, 0.3))
-            drop-shadow(0 0 38px rgb(255, 255, 255, 0.2));
+            drop-shadow(0 0 75px rgb(255, 255, 255, 0.2))
+            drop-shadow(0 0 38px rgb(255, 255, 255, 0.1));
       }
       .working__icon{
          height: 8.6rem;
