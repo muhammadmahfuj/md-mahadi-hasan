@@ -14,6 +14,8 @@
    --gradient-type-5: linear-gradient(to right, #B796FF 0%, #5B2CC0 100%);
    --gradient-type-6: linear-gradient(45deg, #000000 0%, #906DF3 33%, #000000 73%, #FFFFFF 100%);
    --gradient-type-7: linear-gradient(45deg, #9BFCDF 0%, #906DF3 33%, #6FC351 73%, #FFFFFF 100%);
+   --gradient-type-8: linear-gradient(to bottom, #000000 36%, #150A2F 100%);
+   --gradient-type-9: linear-gradient(169deg, #000000 2%, #FFFFFF 23%, #000000 59%, #FFFFFF 100%);
    --max-width: 124rem;
 }
 
@@ -232,7 +234,7 @@ li{
          width: 100%;
          object-fit: cover;
       }
-
+      /* Hearing is feeling */
       .hear-feel__body{
          flex-direction: column;
          justify-content: flex-start;
@@ -240,8 +242,6 @@ li{
          text-align: center;
          gap: 3rem;
          padding: 5.5rem 0;
-      }
-      .hear-feel__body{
          width: 100%;
          height: 43.5rem;
          background-color: var(--color-accent);
@@ -329,6 +329,11 @@ li{
          z-index: 1;
 
       } */
+       .working-with-body{
+         flex-direction: row;
+         gap: 4.7rem;
+       }
+       /* working with body left */
       .working__left__body{
          flex-direction: column;
          justify-content: center;
@@ -361,5 +366,97 @@ li{
       .working__left__body p{
          margin-bottom: 1.5rem;
       }
-      
+      /* working with body right */
+         .working__right{
+            text-align: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5rem;
+         }
+         /* why choose us top */
+         .hand-picked{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 3rem;
+         }
+         .hand-picked__body{
+            height: 4rem;
+            width: 28.5rem;
+            background-color: var(--color-accent);
+         }
+         .hand-picked__body .content-container__type1{
+            padding: 1.3rem 1.6rem;
+         }
+         .hand-picked .container__gradient::after{
+            background: var(--gradient-type-3);
+         }
+         .hand-picked__body p{
+            font-weight: 100;
+            font-size: 1.2rem;
+         }
+         .hand-picked h2{
+            font-weight: 900;
+            font-size: 3.6rem;
+            font-style: italic;
+            
+         }
+         .quality{
+            color: #B694FF;
+         }
+         .sound{
+            color: #FFBA94;
+         }
+         /* why choose us container */
+         .why-choose-us__body{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 4rem;
+            padding: 5.5rem 0;
+            width: 100%;
+            height: 43rem;
+            background: var(--gradient-type-8);
+         }
+         
+         .why-choose-us .container__gradient::after{
+            background: var(--color-white);
+         }
+         
+         .choose-us{
+            position: relative;
+            z-index: 1;
+         }
+         .choose-us__body{
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            width: 28.5rem;
+            background: var(--color-accent);
+         }
+         .choose-us .container__gradient::after{
+            background: var(--gradient-type-9);
+         }
+         .why-choose-us__body h2{
+            margin-bottom: 2rem;
+            font-weight: 100;
+            font-size: 3.6rem;
+            /* width: 103rem; */
+         }
+         .choose-us-img{
+            /* border-radius: 50%; */
+            /* border: 1px solid red; */
+            height: 10rem;
+            width: 10rem;
+            overflow: hidden;
+            object-fit: cover;
+
+         }
+         .choose-us-img img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+         }
    /* footer */
