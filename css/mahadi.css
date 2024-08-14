@@ -89,6 +89,9 @@ li{
 
 * img{
    cursor: pointer;
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
 }
 
 /* common styles */
@@ -229,11 +232,6 @@ li{
          width: 69rem;
          overflow: hidden;
       }
-      .trusted__img img{
-         height: 100%;
-         width: 100%;
-         object-fit: cover;
-      }
       /* Hearing is feeling */
       .hear-feel__body{
          flex-direction: column;
@@ -319,20 +317,28 @@ li{
          overflow: hidden;
       }
       .working__icon img{
-         height: 100%;
-         width: 100%;
          object-fit: contain;
          filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.5));
       }
-      /* .working__left{
+      .working__left{
          position: relative;
+      }
+      .arrow{
+         position: absolute;
+         top: -8rem;
+         left: -2rem;
+         height: 10rem;
+         width: 10rem;
          z-index: 1;
+      }
+      .arrow img{
+         object-fit: contain;
+      }
 
-      } */
-       .working-with-body{
+      .working-with-body{
          flex-direction: row;
          gap: 4.7rem;
-       }
+      }
        /* working with body left */
       .working__left__body{
          flex-direction: column;
@@ -350,11 +356,6 @@ li{
          height: 38rem;
          width: 37rem;
          overflow: hidden;
-      }
-      .working__left__body img{
-         height: 100%;
-         width: 100%;
-         object-fit: cover;
       }
       .working__left__body h3{
          font-weight: 500;
@@ -452,11 +453,8 @@ li{
             width: 10rem;
             overflow: hidden;
             object-fit: cover;
-
          }
          .choose-us-img img{
-            height: 100%;
-            width: 100%;
             object-fit: contain;
          }
    /* footer */
