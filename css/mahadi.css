@@ -6,7 +6,9 @@
    --color-secondary: #D9D9D9;
    --color-white: #FFFFFF;
    --color-accent: #151515;
-   --color-hover: #D9D9D9;
+   --color-accent-2: #0E0E0E;
+   --color-accent-3: #F1C644;
+   --color-hover: rgb(182, 148, 255, 0.3);
    --gradient-type-1: linear-gradient(to right, #69ED8E 0%, #3489D7 93%);
    --gradient-type-2: linear-gradient(to right, #F6A224 0%, #68D734 41%, #3BEC2B 66%, #81A4FF 100%);
    --gradient-type-3: linear-gradient(to right, #F6A224 0%, #5E34D7 38%, #EC9F2B 81%, #81A4FF 100%);
@@ -459,6 +461,9 @@ li{
          }
 
          /* Featured Work */
+         .featured-work{
+            margin-top: 20rem;
+         }
          .featured__heading{
             flex-direction: column;
             align-items: center;
@@ -490,5 +495,108 @@ li{
             border-radius: 3rem;
             padding: 1px 0.2px;
             background: var(--gradient-type-6);
+         }
+
+         /* Client Testimonials */
+         .testimonial-head h2{
+            text-align: center;
+            font-weight: 600;
+            font-size: 4.8rem;
+         }
+         .testimonial-head hr{
+            margin: auto;
+            width: 39.5rem;
+            margin-bottom: 2.5rem;
+         }
+         .review{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:6.6rem;
+            margin-bottom: 5rem;
+         }
+         .star-rating{
+            color: var(--color-accent-3);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+         }
+         .review-container h4{
+            margin-top: 4rem;
+         }
+         .review-container{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            max-width: 53rem;
+            height: 26rem;
+            padding: 2.5rem;
+            text-align: left;
+            border-radius: 1.8rem;
+            background-color: var(--color-accent-2);
+            /* background-color: red; */
+            transition: all 0.32s;
+         }
+         
+         .review-container:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 10px var(--color-hover),
+            0 0 20px var(--color-hover),
+            0 0 30px var(--color-hover);
+         }
+
+         .dot-indicators {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+          }
+          
+          .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #666;
+            margin: 1rem;
+            cursor: pointer;
+          }
+          
+          .dot.active {
+            background-color: #ccc;
+          }
+          
+          /* let's talk about you */
+          .about-you{
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.4rem;
+          }
+          .about-you h4{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+          }
+          .about-you__img{
+            width: 5.6rem;
+            height: 5.2rem;
+          }
+         .your__project{
+            position: relative;
+            background-color: var(--color-primary);
+            justify-content: center;
+            align-items: center;
+         }
+         .your__project .container__gradient::after{
+            border-radius: 3rem;
+            padding: 1px 0.2px;
+            background: var(--gradient-type-7);
+         }
+         
+         .your__project__body a{
+            font-weight: 500;
+            font-size: 4rem;
+         }
+         .footer{
+            text-align: left;
          }
    /* footer */
