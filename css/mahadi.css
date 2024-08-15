@@ -259,7 +259,7 @@ li{
          justify-content: center;
          align-items: center;
          font-size: 1.2rem;
-         width: 28.5rem;
+         width: 30rem;
          background-color: var(--color-accent);
       }
       .see-believe .container__gradient::after{
