@@ -15,7 +15,7 @@
    --gradient-type-4: linear-gradient(164deg, #000000 2%, #FFFFFF 23%, #000000 59%, #FFFFFF 100%);
    --gradient-type-5: linear-gradient(to right, #B796FF 0%, #5B2CC0 100%);
    --gradient-type-6: linear-gradient(120deg, #000000 0%, #906DF3 33%, #000000 100%);
-   --gradient-type-7: linear-gradient(45deg, #9BFCDF 0%, #906DF3 33%, #6FC351 73%, #FFFFFF 100%);
+   --gradient-type-7: linear-gradient(60deg, #9BFCDF 0%, #906DF3 50%, #6FC351 73%, #FFFFFF 100%);
    --gradient-type-8: linear-gradient(to bottom, #000000 36%, #150A2F 100%);
    --gradient-type-9: linear-gradient(169deg, #000000 2%, #FFFFFF 23%, #000000 59%, #FFFFFF 100%);
    --max-width: 124rem;
@@ -170,6 +170,9 @@ li{
 
    .btn-type-3{
       background: var(--gradient-type-5);
+      box-shadow: 0 0 30px rgb(144, 109, 243, 0.5),
+            0 0 40px rgb(144, 109, 243, 0.25),
+            0 0 50px rgba(145, 109, 243, 0.25);
    }
 /* body */
    /* header */
@@ -235,15 +238,15 @@ li{
          overflow: hidden;
       }
       /* Hearing is feeling */
+      
       .hear-feel__body{
+         padding: 10rem;
          flex-direction: column;
          justify-content: flex-start;
          align-items: center;
          text-align: center;
          gap: 3rem;
-         padding: 5.5rem 0;
          width: 100%;
-         height: 43.5rem;
          background-color: var(--color-accent);
       }
       .hear-feel .container__gradient::after{
@@ -251,7 +254,7 @@ li{
          
       }
       
-      .see-believe{
+      /* .see-believe{
          position: relative;
          z-index: 1;
       }
@@ -264,7 +267,7 @@ li{
       }
       .see-believe .container__gradient::after{
          background: var(--gradient-type-3);
-      }
+      } */
       .hear-feel__body h2{
          margin-bottom: 2rem;
          font-weight: 600;
@@ -385,32 +388,28 @@ li{
             gap: 3rem;
          }
          .hand-picked__body{
-            height: 4rem;
-            width: 28.5rem;
+            padding: 2.2rem 5.3rem;
             background-color: var(--color-accent);
          }
-         .hand-picked__body .content-container__type1{
-            padding: 1.3rem 1.6rem;
-         }
+
          .hand-picked .container__gradient::after{
             background: var(--gradient-type-3);
+            
          }
          .hand-picked__body p{
-            font-weight: 200;
-            font-size: 1.2rem;
+            font-weight: 300;
+            font-size: 2rem;
          }
          .hand-picked h2{
             font-weight: 900;
-            font-size: 3.6rem;
+            font-size: 3.2rem;
             font-style: italic;
             
          }
          .quality{
             color: #B694FF;
          }
-         .sound{
-            color: #FFBA94;
-         }
+         
          /* why choose us container */
          .why-choose-us__body{
             flex-direction: column;
@@ -470,6 +469,10 @@ li{
             justify-content: center;
             gap: 1.7rem;
          }
+         .featured__heading h3{
+            font-weight: 300;
+            font-size: 3.6rem;
+         }
          .featured__body{
             flex-direction: column;
             justify-content: center;
@@ -500,7 +503,7 @@ li{
          /* Client Testimonials */
          .testimonial-head h2{
             text-align: center;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 4.8rem;
          }
          .testimonial-head hr{
@@ -557,7 +560,7 @@ li{
             height: 10px;
             border-radius: 50%;
             background-color: #666;
-            margin: 1rem;
+            margin: 0.6rem;
             cursor: pointer;
           }
           
@@ -581,6 +584,7 @@ li{
             height: 5.2rem;
           }
          .your__project{
+            border-radius: 3rem;
             position: relative;
             background-color: var(--color-primary);
             justify-content: center;
@@ -588,7 +592,7 @@ li{
          }
          .your__project .container__gradient::after{
             border-radius: 3rem;
-            padding: 1px 0.2px;
+            /* padding: 1px 0.2px; */
             background: var(--gradient-type-7);
          }
          
