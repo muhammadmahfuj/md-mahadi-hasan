@@ -1,3 +1,12 @@
+/*
+TODO:
+
+1. Add a loader from json
+2. Add running animation on "See All work"
+3. Add infinte scroll on logo and customer review
+4. Add toggle navbar
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 /* root */
@@ -42,7 +51,7 @@ body{
    color: var(--color-secondary);
    font: 400 1.4rem "Inter", Arial, Helvetica, sans-serif;
 }
-   /* inter font variables 
+   /* inter font variables
       Thin: 100
       Light: 300
       Regular: 400
@@ -52,7 +61,7 @@ body{
       Extrabold: 800
       Black: 900
    */
-   /* 
+   /*
    font: shorthand order
    font-style
    font-variant
@@ -82,8 +91,8 @@ h4{
 a{
    text-decoration: none;
 }
-a:link, a:visited, a:active { 
-   color: var(--color-secondary); 
+a:link, a:visited, a:active {
+   color: var(--color-secondary);
 }
 li{
    list-style: none;
@@ -149,7 +158,7 @@ li{
       padding: 2rem 5.5rem;
       transition: all 0.15s;
    }
-   
+
    /* .btn:hover{
       box-shadow:  0 0 10px var(--color-hover),
       0 0 20px var(--color-hover),
@@ -161,18 +170,18 @@ li{
    }
    .btn-type-1 a{
       color: var(--color-primary);
-      
+
    }
    .btn-type-2{
       background-color: var(--color-primary);
-      
+
    }
 
    .btn-type-3{
       background: var(--gradient-type-5);
-      box-shadow: 0 0 30px rgb(144, 109, 243, 0.5),
-            0 0 40px rgb(144, 109, 243, 0.25),
-            0 0 50px rgba(145, 109, 243, 0.25);
+      box-shadow: 0 0 30px rgb(144, 109, 243, 0.25),
+            0 0 25px rgb(144, 109, 243, 0.25),
+            0 0 20px rgba(145, 109, 243, 0.25);
    }
 /* body */
    /* header */
@@ -198,8 +207,18 @@ li{
          gap: 1.7rem;
          background-color: var(--color-primary);
       }
-      
-     
+      /* Collapsable */
+      .toggle__menu{
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+      }
+      .collapsible__content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
       /* hero */
       .video-wraper{
          border-radius: 1.6rem;
@@ -238,7 +257,7 @@ li{
          overflow: hidden;
       }
       /* Hearing is feeling */
-      
+
       .hear-feel__body{
          padding: 10rem;
          flex-direction: column;
@@ -251,9 +270,9 @@ li{
       }
       .hear-feel .container__gradient::after{
          background: var(--gradient-type-3);
-         
+
       }
-      
+
       /* .see-believe{
          position: relative;
          z-index: 1;
@@ -294,7 +313,7 @@ li{
          align-items: center;
          justify-content: center;
          text-align: center;
-         
+
          width: 100%;
       }
       .working-with-header h1{
@@ -394,7 +413,7 @@ li{
 
          .hand-picked .container__gradient::after{
             background: var(--gradient-type-3);
-            
+
          }
          .hand-picked__body p{
             font-weight: 300;
@@ -404,12 +423,12 @@ li{
             font-weight: 900;
             font-size: 3.2rem;
             font-style: italic;
-            
+
          }
          .quality{
             color: #B694FF;
          }
-         
+
          /* why choose us container */
          .why-choose-us__body{
             flex-direction: column;
@@ -422,11 +441,11 @@ li{
             height: 43rem;
             background: var(--gradient-type-8);
          }
-         
+
          .why-choose-us .container__gradient::after{
             background: var(--color-white);
          }
-         
+
          .choose-us{
             position: relative;
             z-index: 1;
@@ -436,15 +455,15 @@ li{
             align-items: center;
             font-size: 1.2rem;
             width: 28.5rem;
-            background: var(--color-accent);
+            background: var(--color-primary);
          }
          .choose-us .container__gradient::after{
             background: var(--gradient-type-9);
          }
-         .why-choose-us__body h2{
+         .why-choose-us__body p{
             margin-bottom: 2rem;
-            font-weight: 100;
-            font-size: 3.6rem;
+            font-weight: 700;
+            font-size: 3.4rem;
             /* width: 103rem; */
          }
          .choose-us-img{
@@ -457,6 +476,10 @@ li{
          }
          .choose-us-img img{
             object-fit: contain;
+         }
+         .choose-us__body h3{
+            font-weight: 500;
+            font-size: 2.4rem;
          }
 
          /* Featured Work */
@@ -539,7 +562,7 @@ li{
             /* background-color: red; */
             transition: all 0.32s;
          }
-         
+
          .review-container:hover{
             transform: scale(1.05);
             box-shadow: 0 0 10px var(--color-hover),
@@ -554,7 +577,7 @@ li{
             display: flex;
             justify-content: center;
           }
-          
+
           .dot {
             width: 10px;
             height: 10px;
@@ -563,11 +586,11 @@ li{
             margin: 0.6rem;
             cursor: pointer;
           }
-          
+
           .dot.active {
             background-color: #ccc;
           }
-          
+
           /* let's talk about you */
           .about-you{
             flex-direction: column;
@@ -595,7 +618,7 @@ li{
             /* padding: 1px 0.2px; */
             background: var(--gradient-type-7);
          }
-         
+
          .your__project__body a{
             font-weight: 500;
             font-size: 4rem;
