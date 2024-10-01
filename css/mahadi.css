@@ -492,7 +492,7 @@ li{
          .working__right{
             text-align: center;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             gap: 5rem;
          }
@@ -504,6 +504,7 @@ li{
             gap: 3rem;
          }
          .hand-picked__body{
+            display: none;
             padding: 2.2rem 5.3rem;
             background-color: var(--color-accent);
          }
