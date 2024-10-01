@@ -4,7 +4,7 @@ TODO:
 1. Add a loader from json
 2. Add running animation on "See All work"
 3. Add infinte scroll on logo and customer review
-4. Add toggle navbar
+4. Add toggle navbar => done.
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -185,6 +185,69 @@ li{
             0 0 25px rgb(144, 109, 243, 0.25),
             0 0 20px rgba(145, 109, 243, 0.25);
    }
+
+   /* Infinite Scroll */
+   .scroller {
+      max-width: 700px;
+    }
+    .scroller img{
+      max-width: 100px;
+
+    }
+    
+    .scroller__inner {
+      padding-block: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: contain;
+
+      /* flex-wrap: wrap; */
+      gap: 2rem;
+    }
+    
+    .scroller[data-animated="true"] {
+      overflow: hidden;
+      -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+      );
+      mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    }
+    
+    .scroller[data-animated="true"] .scroller__inner {
+      width: max-content;
+      flex-wrap: nowrap;
+      animation: scroll var(--_animation-duration, 40s)
+        var(--_animation-direction, forwards) linear infinite;
+    }
+    
+    .scroller[data-direction="right"] {
+      --_animation-direction: reverse;
+    }
+    
+    .scroller[data-direction="left"] {
+      --_animation-direction: forwards;
+    }
+    
+    .scroller[data-speed="fast"] {
+      --_animation-duration: 20s;
+    }
+    
+    .scroller[data-speed="slow"] {
+      --_animation-duration: 30s;
+    }
+    
+    @keyframes scroll {
+      to {
+        transform: translate(calc(-50% - 0.5rem));
+      }
+    }
+
+
 /* body */
    /* header */
       /* navbar */
@@ -259,6 +322,8 @@ li{
             0 0 20px rgba(145, 109, 243, 0.25);
        }
 
+       
+
       /* hero */
       .video-wraper{
          border-radius: 1.6rem;
@@ -282,7 +347,7 @@ li{
          flex-direction: column;
          align-items: center;
          justify-content: center;
-         gap: 1rem;
+         gap: 3rem;
       }
       .trusted__body{
          height: 4rem;
@@ -292,10 +357,8 @@ li{
       .trusted-by .container__gradient::after{
          background: var(--gradient-type-2);
       }
-      .trusted__img{
-         width: 69rem;
-         overflow: hidden;
-      }
+
+
       /* Hearing is feeling */
 
       .hear-feel__body{
