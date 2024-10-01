@@ -1,3 +1,14 @@
+document.addEventListener("click", function (event) {
+  const menu = document.querySelector(".collapsible");
+  const toggleIcon = document.querySelector(".toggle__menu");
+
+  // If the clicked target is not the toggle icon or the menu, and the menu is expanded
+  if (!menu.contains(event.target) && !toggleIcon.contains(event.target)) {
+    menu.classList.remove("collapsible__expanded");
+    document.documentElement.classList.remove("menu-open");
+  }
+});
+
 const collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach((item) =>
   item.addEventListener("click", function () {

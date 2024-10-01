@@ -303,6 +303,7 @@ li{
          max-height: 0;
          overflow: hidden;
          opacity: 0;
+         display: none;
          transition: all 0.3s;
       }
 
@@ -313,15 +314,8 @@ li{
       .collapsible__expanded .collapsible__content {
          max-height: 100vh;
          opacity: 1;
-         /* display: flex; */
+         display: flex;
        }
-
-       .collapsible__expanded .circle-icon{
-         box-shadow: 0 0 30px rgb(144, 109, 243, 0.25),
-            0 0 25px rgb(144, 109, 243, 0.25),
-            0 0 20px rgba(145, 109, 243, 0.25);
-       }
-
        
 
       /* hero */
